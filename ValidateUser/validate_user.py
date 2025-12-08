@@ -25,13 +25,13 @@ def validate_user_credentials(conn, username_input):
             if access_level == "Full":
                 return access_level
             else:
-                log_error(username_input, str(e), "User does not have 'Full' access. AccessLevel")
+                log_error(username_input, "User does not have 'Full' access. AccessLevel", "DB Connection")
                 print(f"User does not have 'Full' access. AccessLevel: {access_level}")
                 return None
         else:
-            log_error(username_input, str(e), "Username not found.") 
+            log_error(username_input, "Username not found.", "DB Connection") 
             return None
     except Exception as e:
-        log_error(username_input, str(e), "Error validating user credentials")
+        log_error(username_input, "Error validating user credentials", "DB Connection")
         print(f"Error validating user credentials: {e}")
         return None
