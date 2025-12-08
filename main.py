@@ -1,7 +1,9 @@
 from Database.db_connection import create_db_connection
 # from Database.import_excel import import_excel_data_to_db
 from ValidateUser.validate_user import validate_user_credentials
+# from OrderProcessing.fetch_data import fetch_data_if_admin
 from OrderProcessing.fetch_data import fetch_data_if_admin
+from ProcessOrder.export_orders import export_orders_to_excel
 
 
 def main():
@@ -21,7 +23,17 @@ def main():
         conn.close()
         return
 
-    fetch_data_if_admin(conn, access_level)
+
+ # Fetch order data from the database
+    query = "SELECT OrderID, StatusCode, DistributionCenter, OrderDate FROM Order_Data"
+    order_data = fetch_data_if_admin(conn, query)
+
+    # Define output file path
+    output_file = 'Processed_Orders_by_DC.xlsx'
+
+    # Export the order data to an Excel file with separate sheets for each DC
+    export_orders_to_excel(order_data, output_file)
+    
 
     conn.close()
 

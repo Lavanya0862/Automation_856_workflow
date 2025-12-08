@@ -1,4 +1,5 @@
 import sqlite3
+from ErrorHandler.error_handler import log_error
 
 def create_db_connection(db_path):
     try:
@@ -20,11 +21,17 @@ def validate_user_credentials(conn, username_input):
         result = cursor.fetchone()
 
         if result:
-            AccessLevel = result[0]
-            return AccessLevel
+            access_level = result[0]
+            if access_level == "Full":
+                return access_level
+            else:
+                log_error(username_input, str(e), "User does not have 'Full' access. AccessLevel")
+                print(f"User does not have 'Full' access. AccessLevel: {access_level}")
+                return None
         else:
-            print("Username not found.")
+            log_error(username_input, str(e), "Username not found.") 
             return None
     except Exception as e:
+        log_error(username_input, str(e), "Error validating user credentials")
         print(f"Error validating user credentials: {e}")
         return None
