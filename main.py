@@ -1,5 +1,5 @@
 from Database.db_connection import create_db_connection
-# from Database.import_excel import import_excel_data_to_db
+from Database.import_excel import import_excel_data_to_db
 from ValidateUser.validate_user import validate_user_credentials
 # from OrderProcessing.fetch_data import fetch_data_if_admin
 from OrderProcessing.fetch_data import fetch_data_if_admin
@@ -12,10 +12,10 @@ def main():
     if not conn:
         return
 
-    # excel_file_path = 'Database/Automation_856_Workflow_Data.xlsx'
-    # if not import_excel_data_to_db(conn, excel_file_path):
-    #     conn.close()
-    #     return
+    excel_file_path = 'Database/Automation_856_Workflow_Data.xlsx'
+    if not import_excel_data_to_db(conn, excel_file_path):
+        conn.close()
+        return
 
     username_input = input("Enter your username: ")
     access_level = validate_user_credentials(conn, username_input)
@@ -25,7 +25,18 @@ def main():
 
 
  # Fetch order data from the database
-    query = "SELECT OrderID, StatusCode, DistributionCenter, OrderDate FROM Order_Data"
+    query = """
+        SELECT 
+            o.OrderID,
+            o.StatusCode,
+            o.DistributionCenter,
+            o.OrderDate,
+            r.ProcessingRule
+        FROM Order_Data o
+        LEFT JOIN Reference_Data r
+        ON o.StatusCode = r.StatusCode
+    """
+
     order_data = fetch_data_if_admin(conn, query)
 
     # Define output file path
