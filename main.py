@@ -4,6 +4,7 @@ from ValidateUser.validate_user import validate_user_credentials
 # from OrderProcessing.fetch_data import fetch_data_if_admin
 from OrderProcessing.fetch_data import fetch_data_if_admin
 from ProcessOrder.export_orders import export_orders_to_excel
+from Email.sendMailOAuth import send_reports
 
 
 def main():
@@ -44,6 +45,9 @@ def main():
 
     # Export the order data to an Excel file with separate sheets for each DC
     export_orders_to_excel(order_data, output_file)
+
+    sender_email = "kaiftemp1204@gmail.com"
+    send_reports(output_file,sender_email)
     
 
     conn.close()
