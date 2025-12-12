@@ -5,7 +5,7 @@ def export_orders_to_excel(dataframe, output_file):
     missing_dc = dataframe[dataframe['DistributionCenter'].isnull()]
     missing_status = dataframe[dataframe['StatusCode'].isnull()]
 
-    # print(dataframe)
+    print(dataframe)
     # Log errors for missing 'DistributionCenter'
     if not missing_dc.empty:
         for _, row in missing_dc.iterrows():
