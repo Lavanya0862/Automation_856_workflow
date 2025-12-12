@@ -10,6 +10,7 @@ import os
 def abs_path(relative_path):
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
     return os.path.join(BASE_DIR, relative_path)
+from Email.sendMailOAuth import send_reports
 
 
 def main():
@@ -50,6 +51,9 @@ def main():
 
     # Export the order data to an Excel file with separate sheets for each DC
     export_orders_to_excel(order_data, output_file)
+
+    sender_email = "kaiftemp1204@gmail.com"
+    send_reports(output_file,sender_email)
     
 
     conn.close()
