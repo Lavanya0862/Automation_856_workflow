@@ -12,11 +12,6 @@ error_id = f"ERR{int(datetime.now().timestamp())}"
 timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
 def User_log_error(user_name, error_description, error_type):
-
-    # print(user_name , error_description , error_type)
-   
-
-
     # Log the error with the specified format
     logging.error(f"ErrorID: {error_id} | UserID: {user_name} | ErrorDescription: {error_description} | Timestamp: {timestamp}")
 
@@ -24,17 +19,6 @@ def User_log_error(user_name, error_description, error_type):
 
 
 def log_error(order_id, error_description, error_type):
-
-    # print(order_id , error_description , error_type)
-    """
-    Logs errors to a file (error.log) with the specified format:
-    - ErrorID
-    - OrderID (User or Order ID)
-    - ErrorDescription
-    - Timestamp
-    """
-
-
     # Log the error with the specified format
     logging.error(f"ErrorID: {error_id} | OrderID: {order_id} | ErrorDescription: {error_description} | Timestamp: {timestamp}")
 

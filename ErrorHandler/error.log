@@ -2,3 +2,13 @@
 2025-12-09 10:53:48 - ErrorID: ERR1765277620 | OrderID: ORD006 | ErrorDescription: Missing StatusCode | Timestamp: 2025-12-09 10:53:40
 2025-12-09 10:54:23 - ErrorID: ERR1765277657 | OrderID: ORD004 | ErrorDescription: Missing DistributionCenter | Timestamp: 2025-12-09 10:54:17
 2025-12-09 10:54:23 - ErrorID: ERR1765277657 | OrderID: ORD006 | ErrorDescription: Missing StatusCode | Timestamp: 2025-12-09 10:54:17
+2025-12-10 11:14:02 - ErrorID: ERR1765365238 | OrderID: ORD004 | ErrorDescription: Missing DistributionCenter | Timestamp: 2025-12-10 11:13:58
+2025-12-10 11:14:02 - ErrorID: ERR1765365238 | OrderID: ORD006 | ErrorDescription: Missing StatusCode | Timestamp: 2025-12-10 11:13:58
+2025-12-10 11:18:54 - ErrorID: ERR1765365531 | OrderID: ORD004 | ErrorDescription: Missing DistributionCenter | Timestamp: 2025-12-10 11:18:51
+2025-12-10 11:18:54 - ErrorID: ERR1765365531 | OrderID: ORD006 | ErrorDescription: Missing StatusCode | Timestamp: 2025-12-10 11:18:51
+2025-12-10 11:21:27 - ErrorID: ERR1765365684 | OrderID: ORD004 | ErrorDescription: Missing DistributionCenter | Timestamp: 2025-12-10 11:21:24
+2025-12-10 11:21:27 - ErrorID: ERR1765365684 | OrderID: ORD006 | ErrorDescription: Missing StatusCode | Timestamp: 2025-12-10 11:21:24
+2025-12-10 11:24:48 - ErrorID: ERR1765365886 | OrderID: ORD004 | ErrorDescription: Missing DistributionCenter | Timestamp: 2025-12-10 11:24:46
+2025-12-10 11:24:48 - ErrorID: ERR1765365886 | OrderID: ORD006 | ErrorDescription: Missing StatusCode | Timestamp: 2025-12-10 11:24:46
+2025-12-10 11:26:57 - ErrorID: ERR1765366014 | OrderID: ORD004 | ErrorDescription: Missing DistributionCenter | Timestamp: 2025-12-10 11:26:54
+2025-12-10 11:26:57 - ErrorID: ERR1765366014 | OrderID: ORD006 | ErrorDescription: Missing StatusCode | Timestamp: 2025-12-10 11:26:54

@@ -4,15 +4,21 @@ from ValidateUser.validate_user import validate_user_credentials
 # from OrderProcessing.fetch_data import fetch_data_if_admin
 from OrderProcessing.fetch_data import fetch_data_if_admin
 from ProcessOrder.export_orders import export_orders_to_excel
+import os
+
+
+def abs_path(relative_path):
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    return os.path.join(BASE_DIR, relative_path)
 
 
 def main():
-    db_path = 'Database/automation_data.db'
+    db_path = abs_path('Database/automation_data.db')
     conn = create_db_connection(db_path)
     if not conn:
         return
 
-    excel_file_path = 'Database/Automation_856_Workflow_Data.xlsx'
+    excel_file_path = abs_path('Database/Automation_856_Workflow_Data.xlsx')
     if not import_excel_data_to_db(conn, excel_file_path):
         conn.close()
         return
@@ -34,13 +40,13 @@ def main():
             r.ProcessingRule
         FROM Order_Data o
         LEFT JOIN Reference_Data r
-        ON o.StatusCode = r.StatusCode
+        ON CAST(o.StatusCode AS INTEGER) = CAST(r.StatusCode AS INTEGER)
     """
 
     order_data = fetch_data_if_admin(conn, query)
 
     # Define output file path
-    output_file = 'Processed_Orders_by_DC.xlsx'
+    output_file = abs_path('Processed_Orders_by_DC.xlsx')
 
     # Export the order data to an Excel file with separate sheets for each DC
     export_orders_to_excel(order_data, output_file)
