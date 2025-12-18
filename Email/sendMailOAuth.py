@@ -58,7 +58,7 @@ def create_message(sender, to, subject, body, attachment_path):
 
     return {"raw": base64.urlsafe_b64encode(msg.as_bytes()).decode()}
 
-def send_email(service, sender, to, subject, body, attachment_path):
+def send_email(service, sender, to, subject, body, attachment_path): 
     try:
         message = create_message(sender, to, subject, body, attachment_path)
         sent = service.users().messages().send(userId="me", body=message).execute()
@@ -89,4 +89,3 @@ def send_reports(excel_file, sender_email):
         send_email(service, sender_email, recipient_email, subject, body, sheet_csv)
 
         os.remove(sheet_csv)
-

@@ -1,6 +1,5 @@
 import sqlite3
 
-
 def create_db_connection(db_path):
     try:
         conn = sqlite3.connect(db_path)
