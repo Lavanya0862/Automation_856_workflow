@@ -10,6 +10,7 @@ from google_auth_oauthlib.flow import InstalledAppFlow
 import pickle
 from pathlib import Path
 from google.auth.transport.requests import Request
+from ErrorHandler.error_handler import email_error 
 
 SCOPES = ['https://www.googleapis.com/auth/gmail.send']
 
@@ -65,6 +66,7 @@ def send_email(service, sender, to, subject, body, attachment_path):
         print(f"Email sent to {to} | Message ID: {sent['id']}")
     except Exception as e:
         print("Error sending email:", e)
+        email_error("Error sending email","ERROR")
 
 def send_reports(excel_file, sender_email):
     xl = pd.ExcelFile(excel_file)
@@ -89,3 +91,4 @@ def send_reports(excel_file, sender_email):
         send_email(service, sender_email, recipient_email, subject, body, sheet_csv)
 
         os.remove(sheet_csv)
+        

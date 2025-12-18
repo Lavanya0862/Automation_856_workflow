@@ -34,3 +34,10 @@ def log_error(order_id, error_description, error_type):
     logging.error(f"ErrorID: {error_id} | OrderID: {order_id} | ErrorDescription: {error_description} | Timestamp: {timestamp}")
 
     print(f"Logged Error: {error_id}, Description: {error_description}, Timestamp: {timestamp}")
+
+
+def email_error(error_description, error_type):
+    logging.error(f"ErrorID: {error_id} | ErrorDescription: {error_description} | Timestamp: {timestamp}")
+
+def db_error(error_description, error_type):
+    logging.error(f"ErrorID: {error_id} | ErrorDescription: {error_description} | Timestamp: {timestamp}") 
