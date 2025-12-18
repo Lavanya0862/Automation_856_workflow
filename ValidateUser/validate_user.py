@@ -1,15 +1,6 @@
 import sqlite3
 from ErrorHandler.error_handler import User_log_error
 
-def create_db_connection(db_path):
-    try:
-        conn = sqlite3.connect(db_path)
-        print("Database connection established.")
-        return conn
-    except sqlite3.Error as e:
-        print(f"Error connecting to database: {e}")
-        return None
-
 
 def validate_user_credentials(conn, username_input):
     try:

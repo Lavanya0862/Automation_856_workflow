@@ -1,5 +1,6 @@
 import pandas as pd
 import sqlite3
+from ErrorHandler.error_handler import db_error
 
 def import_excel_data_to_db(conn, excel_file_path):
     try:
@@ -49,4 +50,5 @@ def import_excel_data_to_db(conn, excel_file_path):
 
     except Exception as e:
         print(f"Error importing data from Excel: {e}")
+        db_error("Error importing data from Excel","Error")
         return False
