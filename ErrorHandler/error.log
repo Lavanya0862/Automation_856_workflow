@@ -1,5 +1,14 @@
-2025-12-08 05:36:16 - ErrorID: ERR1765172176 | ID: user_dc03 | ErrorDescription: cannot access local variable 'e' where it is not associated with a value | Timestamp: 2025-12-08 05:36:16
-2025-12-08 09:37:31 - ErrorID: ERR1765186651 | ID: user_dc02 | ErrorDescription: cannot access local variable 'e' where it is not associated with a value | Timestamp: 2025-12-08 09:37:31
-2025-12-08 09:38:00 - ErrorID: ERR1765186680 | ID: user_dc04 | ErrorDescription: cannot access local variable 'e' where it is not associated with a value | Timestamp: 2025-12-08 09:38:00
-2025-12-08 10:10:09 - ErrorID: ERR1765188609 | ID: user_dc04 | ErrorDescription: cannot access local variable 'e' where it is not associated with a value | Timestamp: 2025-12-08 10:10:09
-2025-12-08 10:15:04 - ErrorID: ERR1765188904 | ID: user_dc04 | ErrorDescription: Username not found. | Timestamp: 2025-12-08 10:15:04
+2025-12-09 10:53:48 - ErrorID: ERR1765277620 | OrderID: ORD004 | ErrorDescription: Missing DistributionCenter | Timestamp: 2025-12-09 10:53:40
+2025-12-09 10:53:48 - ErrorID: ERR1765277620 | OrderID: ORD006 | ErrorDescription: Missing StatusCode | Timestamp: 2025-12-09 10:53:40
+2025-12-09 10:54:23 - ErrorID: ERR1765277657 | OrderID: ORD004 | ErrorDescription: Missing DistributionCenter | Timestamp: 2025-12-09 10:54:17
+2025-12-09 10:54:23 - ErrorID: ERR1765277657 | OrderID: ORD006 | ErrorDescription: Missing StatusCode | Timestamp: 2025-12-09 10:54:17
+2025-12-10 11:14:02 - ErrorID: ERR1765365238 | OrderID: ORD004 | ErrorDescription: Missing DistributionCenter | Timestamp: 2025-12-10 11:13:58
+2025-12-10 11:14:02 - ErrorID: ERR1765365238 | OrderID: ORD006 | ErrorDescription: Missing StatusCode | Timestamp: 2025-12-10 11:13:58
+2025-12-10 11:18:54 - ErrorID: ERR1765365531 | OrderID: ORD004 | ErrorDescription: Missing DistributionCenter | Timestamp: 2025-12-10 11:18:51
+2025-12-10 11:18:54 - ErrorID: ERR1765365531 | OrderID: ORD006 | ErrorDescription: Missing StatusCode | Timestamp: 2025-12-10 11:18:51
+2025-12-10 11:21:27 - ErrorID: ERR1765365684 | OrderID: ORD004 | ErrorDescription: Missing DistributionCenter | Timestamp: 2025-12-10 11:21:24
+2025-12-10 11:21:27 - ErrorID: ERR1765365684 | OrderID: ORD006 | ErrorDescription: Missing StatusCode | Timestamp: 2025-12-10 11:21:24
+2025-12-10 11:24:48 - ErrorID: ERR1765365886 | OrderID: ORD004 | ErrorDescription: Missing DistributionCenter | Timestamp: 2025-12-10 11:24:46
+2025-12-10 11:24:48 - ErrorID: ERR1765365886 | OrderID: ORD006 | ErrorDescription: Missing StatusCode | Timestamp: 2025-12-10 11:24:46
+2025-12-10 11:26:57 - ErrorID: ERR1765366014 | OrderID: ORD004 | ErrorDescription: Missing DistributionCenter | Timestamp: 2025-12-10 11:26:54
+2025-12-10 11:26:57 - ErrorID: ERR1765366014 | OrderID: ORD006 | ErrorDescription: Missing StatusCode | Timestamp: 2025-12-10 11:26:54
